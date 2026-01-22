@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bowen Geng</title>
+  <meta name="description" content="PhD Candidate • Computer Vision • LiDAR • C-V2X • Transportation" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      <a class="brand" href="#top">Bowen Geng</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div>
+        <h1>Bowen Geng</h1>
+        <p class="subtitle">
+          PhD candidate at Rutgers • Computer Vision • LiDAR • C-V2X • Traffic Systems
+        </p>
+
+        <div class="cta">
+          <a class="button" href="#projects">Featured projects</a>
+          <a class="button ghost" href="assets/BowenGeng_CV.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
+        </div>
+
+        <div class="badges">
+          <a href="https://www.linkedin.com/in/bowengeng" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Focus</h2>
+        <ul>
+          <li>Vision-based car-following models (optical cues + stability)</li>
+          <li>YOLOv8 + adaptive HSV traffic signal state detection</li>
+          <li>Roadside sensing → SAE J2735 messaging (MAP/SPaT/BSM/PSM)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I’m a PhD candidate in Civil Engineering at Rutgers University. My work bridges computer vision, roadside
+        sensing (LiDAR/camera), and connected-vehicle communications to enable reliable real-time traffic perception
+        and analytics.
+      </p>
+    </section>
+
+    <section id="research" class="section">
+      <h2>Research</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Visual Driving Rule (VDR)</h3>
+          <p>
+            A car-following model derived from image-plane variables (bounding-box width, expansion rate, optical flow),
+            with theoretical stability analysis and simulation.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Traffic Signal Phase & Timing from Video</h3>
+          <p>
+            Traffic light detection + adaptive color features over time, robust to illumination, glare, and partial occlusion.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Roadside Sensing + C-V2X Interoperability</h3>
+          <p>
+            Edge pipelines that encode detections into SAE J2735 messages and publish to RSU/virtual RSU topics with low latency.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>DataCity Smart Mobility Testing Ground</h3>
+          <p>Multi-sensor deployments and large-scale processing pipelines for New Brunswick, NJ corridors.</p>
+          <p class="meta">Python • OpenCV • PyTorch • SQL</p>
+        </article>
+        <article class="card">
+          <h3>Real-time Messaging (MQTT / ETX)</h3>
+          <p>Authenticated publish/subscribe data products for MAP/SPaT/BSM-like streams over cellular networks.</p>
+          <p class="meta">TLS • Protobuf • Paho MQTT</p>
+        </article>
+        <article class="card">
+          <h3>Android Visualization App</h3>
+          <p>On-device map and lane overlays with live V2X message visualization for demos and field tests.</p>
+          <p class="meta">Java • Android • Mapping SDK</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <h2>Publications</h2>
+      <ol class="pubs">
+        <li>
+          <span class="pub-title">Paper Title (replace me)</span>
+          <span class="pub-meta">Venue, Year</span>
+          <span class="pub-links">
+            <a href="#" target="_blank" rel="noreferrer">PDF</a>
+            <a href="#" target="_blank" rel="noreferrer">Code</a>
+          </span>
+        </li>
+        <li>
+          <span class="pub-title">Paper Title (replace me)</span>
+          <span class="pub-meta">Venue, Year</span>
+          <span class="pub-links">
+            <a href="#" target="_blank" rel="noreferrer">PDF</a>
+          </span>
+        </li>
+      </ol>
+      <p class="hint">Tip: you can link this section to Google Scholar if you don’t want to maintain a list.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:bg605@scarletmail.rutgers.edu">bg605@scarletmail.rutgers.edu</a><br/>
+        LinkedIn: <a href="https://www.linkedin.com/in/bowengeng" target="_blank" rel="noreferrer">/in/bowengeng</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Bowen Geng</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
