@@ -46,7 +46,7 @@ h1{font-size:44px;line-height:1.05;margin:0 0 10px}
 .footer{padding:24px 0;color:var(--muted);border-top:1px solid var(--line);text-align:center;margin-top:18px}
 
 .research-video{
-  max-width:640px;   /* try 600–720 */
+  max-width:320px;   /* try 600–720 */
   margin:12px auto 20px auto; /* center it */
   display:block;
 }
