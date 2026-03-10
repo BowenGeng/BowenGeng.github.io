@@ -46,12 +46,15 @@ h1{font-size:44px;line-height:1.05;margin:0 0 10px}
 .footer{padding:24px 0;color:var(--muted);border-top:1px solid var(--line);text-align:center;margin-top:18px}
 
 /* Make research videos smaller and consistent */
-.research-video{
-  width: 320px;        /* same width for all videos */
-  max-width: 100%;
+video.research-video{
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   display: block;
-  margin: 12px auto;   /* center inside card */
+  margin: 12px auto;
   border-radius: 10px;
+  background: #000;
 }
 
 @media (max-width: 900px){
