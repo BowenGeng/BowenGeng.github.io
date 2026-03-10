@@ -45,10 +45,13 @@ h1{font-size:44px;line-height:1.05;margin:0 0 10px}
 
 .footer{padding:24px 0;color:var(--muted);border-top:1px solid var(--line);text-align:center;margin-top:18px}
 
+/* Make research videos smaller and consistent */
 .research-video{
-  max-width:320px;   /* try 600–720 */
-  margin:12px auto 20px auto; /* center it */
-  display:block;
+  width: 320px;        /* same width for all videos */
+  max-width: 100%;
+  display: block;
+  margin: 12px auto;   /* center inside card */
+  border-radius: 10px;
 }
 
 @media (max-width: 900px){
