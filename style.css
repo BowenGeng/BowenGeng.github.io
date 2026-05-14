@@ -45,14 +45,13 @@ h1{font-size:44px;line-height:1.05;margin:0 0 10px}
 
 .footer{padding:24px 0;color:var(--muted);border-top:1px solid var(--line);text-align:center;margin-top:18px}
 
-/* Make research videos smaller and consistent */
+/* Keep embedded project videos visually consistent across cards. */
 video.research-video{
   width: 100%;
-  max-width: 28px;
-  aspect-ratio: 16 / 9;
+  height: 180px;
   object-fit: contain;
   display: block;
-  margin: 12px auto;
+  margin: 12px auto 0;
   border-radius: 10px;
   background: #000;
 }
