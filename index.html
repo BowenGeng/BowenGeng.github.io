@@ -50,7 +50,7 @@
         <h2>Focus</h2>
         <ul>
           <li>Vision-based car-following models and driver behavior models</li>
-          <li>Traffic signal state detection and recognition</li>
+          <li>Computer vision for intelligent transportation and mobility applications</li>
           <li>Roadside sensing → Connected Vehilce messaging (MAP/SPaT/BSM/PSM)</li>
         </ul>
       </div>
@@ -88,10 +88,13 @@
           </video>
         </article>
         <article class="card">
-          <h3>Roadside Sensing + C-V2X Interoperability</h3>
+          <h3>Birds Eye View (BEV) Reconstruction from dashcam</h3>
           <p>
-            Edge pipelines that encode detections into SAE J2735 messages and publish to RSU/virtual RSU topics with low latency.
+            Transforming front-view dashcam footage into top-down road layouts for vehicle localization and scene understanding.
           </p>
+          <video autoplay loop muted playsinline class="figure research-video">
+          <source src="assets/videos/bev_dashcam_reconstruction.mp4" type="video/mp4">
+          </video>
         </article>
       </div>
     </section>
@@ -102,6 +105,10 @@
         <article class="card">
           <h3>DataCity Smart Mobility Testing Ground</h3>
           <p>Multi-sensor deployments and large-scale processing pipelines for New Brunswick, NJ corridors.</p>
+          <p class="project-links">
+            <a href="https://www.middlesexcountynj.gov/government/departments/department-of-transportation/data-city" target="_blank" rel="noreferrer">Middlesex County DataCity</a>
+            <a href="https://cait.rutgers.edu/datacity/" target="_blank" rel="noreferrer">Rutgers CAIT DataCity</a>
+          </p>
           <p class="meta">Python • OpenCV • PyTorch • SQL</p>
         </article>
         <article class="card">
@@ -152,8 +159,56 @@
     </footer>
   </main>
 
+  <dialog class="video-modal" id="video-modal" aria-label="Expanded video player">
+    <button class="video-modal-close" type="button" aria-label="Close video">×</button>
+    <video id="modal-video" controls playsinline></video>
+  </dialog>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const modal = document.getElementById("video-modal");
+    const modalVideo = document.getElementById("modal-video");
+    const modalClose = document.querySelector(".video-modal-close");
+
+    document.querySelectorAll(".research-video").forEach((video) => {
+      video.tabIndex = 0;
+      video.setAttribute("role", "button");
+      video.setAttribute("aria-label", "Open larger video");
+
+      const openVideo = () => {
+        const source = video.querySelector("source");
+        if (!source) return;
+
+        modalVideo.src = source.src;
+        modal.showModal();
+        modalVideo.play();
+      };
+
+      video.addEventListener("click", openVideo);
+      video.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openVideo();
+        }
+      });
+    });
+
+    const closeVideo = () => {
+      modalVideo.pause();
+      modalVideo.removeAttribute("src");
+      modalVideo.load();
+      modal.close();
+    };
+
+    modalClose.addEventListener("click", closeVideo);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeVideo();
+    });
+    modal.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      closeVideo();
+    });
   </script>
 </body>
 </html>
